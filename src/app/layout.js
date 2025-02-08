@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Navigation from "@/components/Navigation";
@@ -14,16 +15,28 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-montserrat',
+});
+
 export const metadata = {
-  title: 'LeetCode Stats Tracker',
+  title: 'LeetTrackr',
   description: 'Track your LeetCode statistics and progress with an elegant, interactive dashboard',
   keywords: 'leetcode, programming, coding, statistics, tracker',
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+  },
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${montserrat.className} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

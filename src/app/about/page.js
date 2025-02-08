@@ -67,7 +67,7 @@ export default function About() {
       >
         <motion.div variants={itemVariants} className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300">
-            About LeetCode Stats Tracker
+            About LeetTrackr
           </h1>
           <p className="text-lg text-gray-300/90">
             Your companion in the coding journey

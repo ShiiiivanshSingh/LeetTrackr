@@ -8,9 +8,8 @@ export default function Navigation() {
 
   const menuItems = [
     { href: '/', label: 'Home' },
-    { href: '/dashboard', label: 'Dashboard' },
-    { href: '/history', label: 'History' },
     { href: '/about', label: 'About' },
+    { href: 'https://github.com/ShiiiivanshSingh/LeetTrackr', label: 'Contribute', external: true },
   ];
 
   const menuVariants = {
@@ -84,6 +83,7 @@ export default function Navigation() {
                         href={item.href}
                         className="block py-3 text-gray-300 hover:text-white transition-colors duration-200"
                         onClick={() => setIsOpen(false)}
+                        {...(item.external && { target: "_blank", rel: "noopener noreferrer" })}
                       >
                         {item.label}
                       </Link>
