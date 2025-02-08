@@ -5,6 +5,10 @@ A modern, elegant LeetCode statistics tracker. Track your coding progress with b
 <div align="center">
 
 [![LeetTrackr](https://img.shields.io/badge/Try-LeetTracker-8b5cf6?style=for-the-badge)](https://leet-trackr-one.vercel.app/)
+
+<br>
+
+
 [![GitHub stars](https://img.shields.io/github/stars/ShiiiivanshSingh/LeetTrackr?style=for-the-badge&color=purple)](https://github.com/ShiiiivanshSingh/LeetTrackr/stargazers)
 </div>
 
@@ -19,7 +23,12 @@ A modern, elegant LeetCode statistics tracker. Track your coding progress with b
 
 <h1 align="center">Screenshots 📸</h1>
 
-will add soon
+![image](https://github.com/user-attachments/assets/4182d84a-f089-43ed-94c1-71cd15fb8771)
+![image](https://github.com/user-attachments/assets/2abe0552-9406-4509-a8f5-cd7a6fc1ca33)
+
+
+
+
 
 ## Why LeetTrackr? 🤔
 
