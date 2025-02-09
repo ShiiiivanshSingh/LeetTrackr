@@ -9,22 +9,21 @@ export default function ShareCard({ stats, username }) {
   const handleDownload = async () => {
     try {
       if (cardRef.current) {
-        // Add a temporary background for the capture
+       
         const originalBg = cardRef.current.style.background;
         cardRef.current.style.background = 'linear-gradient(to bottom right, rgb(15 23 42), rgb(88 28 135), rgb(15 23 42))';
         
         const canvas = await html2canvas(cardRef.current, {
-          scale: 2, // Higher resolution
+          scale: 2, 
           logging: false,
           useCORS: true,
           allowTaint: true,
           backgroundColor: null,
         });
         
-        // Restore original background
         cardRef.current.style.background = originalBg;
 
-        // Convert to blob for better quality
+      
         canvas.toBlob((blob) => {
           const url = window.URL.createObjectURL(blob);
           const link = document.createElement('a');
@@ -52,7 +51,7 @@ export default function ShareCard({ stats, username }) {
         className="p-8 rounded-2xl backdrop-blur-md bg-white/5 border border-white/10 max-w-lg w-full"
       >
         <div className="space-y-6">
-          {/* Header */}
+        
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
             <h3 className="text-2xl font-bold text-purple-400 shrink-0">
               LeetTrackr Stats
@@ -79,7 +78,7 @@ export default function ShareCard({ stats, username }) {
             </div>
           </div>
 
-          {/* Difficulty Distribution */}
+  
           <div className="space-y-2">
             <p className="text-sm text-gray-400">Difficulty Breakdown</p>
             <div className="space-y-2">
@@ -102,13 +101,13 @@ export default function ShareCard({ stats, username }) {
             </div>
           </div>
 
-          {/* Footer */}
+       
           <div className="flex flex-col items-center space-y-1">
             <div className="text-sm text-gray-400">
               Generated with LeetTrackr
             </div>
             <div className="text-xs text-gray-500 flex items-center gap-2">
-              <span>leettrackr.vercel.app</span>
+              <span>leet-trackr-one.vercel.app</span>
               <span>•</span>
               <span>by Shivansh</span>
             </div>
@@ -116,7 +115,7 @@ export default function ShareCard({ stats, username }) {
         </div>
       </div>
 
-      {/* Download Button */}
+      
       <button
         onClick={handleDownload}
         className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-500 rounded-lg text-white font-semibold transform transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900"
