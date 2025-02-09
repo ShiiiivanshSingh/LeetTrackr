@@ -20,14 +20,15 @@ A modern, elegant LeetCode statistics tracker. Track your coding progress with b
 - **Share Your Progress** - Generate and download beautiful stat cards
 - **Mobile Responsive** - Perfect experience on all devices
 - **Modern UI/UX** - Clean, glassmorphic design with smooth animations
-
 <h1 align="center">Screenshots 📸</h1>
 
-![image](https://github.com/user-attachments/assets/4182d84a-f089-43ed-94c1-71cd15fb8771)
-![image](https://github.com/user-attachments/assets/e880cffd-ee34-4e37-9d72-f7b168d7dda1)
-![image](https://github.com/user-attachments/assets/1031d6a4-c3e2-4237-bb15-e9a1a1be4df0)
-
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4182d84a-f089-43ed-94c1-71cd15fb8771">
+  <br>
+  <img src="https://github.com/user-attachments/assets/e880cffd-ee34-4e37-9d72-f7b168d7dda1">
+  <br>
+  <img src="https://github.com/user-attachments/assets/1031d6a4-c3e2-4237-bb15-e9a1a1be4df0">
+</p>
 
 
 
