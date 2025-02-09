@@ -24,7 +24,8 @@ A modern, elegant LeetCode statistics tracker. Track your coding progress with b
 <h1 align="center">Screenshots 📸</h1>
 
 ![image](https://github.com/user-attachments/assets/4182d84a-f089-43ed-94c1-71cd15fb8771)
-![image](https://github.com/user-attachments/assets/2abe0552-9406-4509-a8f5-cd7a6fc1ca33)
+![image](https://github.com/user-attachments/assets/e880cffd-ee34-4e37-9d72-f7b168d7dda1)
+
 ![image](https://github.com/user-attachments/assets/a835a355-676d-49c3-9534-26bfdb1a783e)
 
 
