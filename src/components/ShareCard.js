@@ -53,11 +53,13 @@ export default function ShareCard({ stats, username }) {
       >
         <div className="space-y-6">
           {/* Header */}
-          <div className="flex items-center justify-between">
-            <h3 className="text-2xl font-bold text-purple-400">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+            <h3 className="text-2xl font-bold text-purple-400 shrink-0">
               LeetTrackr Stats
             </h3>
-            <span className="text-gray-400 text-sm">@{username}</span>
+            <span className="text-gray-400 text-sm break-all">
+              @{username}
+            </span>
           </div>
 
           {/* Stats Grid */}

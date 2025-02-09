@@ -221,13 +221,21 @@ export default function Home() {
                       </Pie>
                       <Tooltip 
                         contentStyle={{ 
-                          backgroundColor: 'rgba(0, 0, 0, 0.8)',
-                          border: 'none',
+                          backgroundColor: 'rgba(17, 24, 39, 0.9)',
+                          border: '1px solid rgba(255, 255, 255, 0.1)',
                           borderRadius: '8px',
-                          color: '#fff'
+                          padding: '8px 12px',
+                          boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+                          color: '#fff',
+                          outline: 'none'
                         }}
+                        formatter={(value, name) => [
+                          <span key={`value-${name}`} style={{ color: '#fff' }}>{value}</span>,
+                          <span key={`name-${name}`} style={{ color: '#fff' }}>{name}</span>
+                        ]}
                       />
                       <Legend 
+
                         verticalAlign="bottom" 
                         height={36}
                         formatter={(value) => <span className="text-gray-300">{value}</span>}
@@ -319,8 +327,34 @@ export default function Home() {
                 </div>
               </motion.div>
 
-              {/* Share Card */}
-              <DynamicShareCard stats={stats} username={username} />
+              {/* Share Card and Buttons */}
+              <div className="space-y-4 flex flex-col items-center">
+                <DynamicShareCard stats={stats} username={username} />
+                
+                {/* Share Buttons Container */}
+                <div className="space-y-4 flex flex-col items-center">
+                  {/* Twitter Share Button */}
+                  <a
+                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+                      `🎯 My LeetCode Stats:\n` +
+                      `✅ Problems Solved: ${stats.submitStats.acSubmissionNum[0].count}\n` +
+                      `📈 Success Rate: ${((stats.submitStats.acSubmissionNum[0].submissions / 
+                        stats.submitStats.totalSubmissionNum[0].submissions) * 100).toFixed(1)}%\n` +
+                      `\nCheck out your LeetCode Stats with LeetTrackr by @de_mirage_fan! \n🚀\t leet-trackr-one.vercel.app`
+                    )}`}
+
+
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center px-6 py-3 bg-purple-600 hover:bg-purple-500 rounded-lg text-white font-semibold transform transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 w-full sm:w-auto"
+                  >
+                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                    </svg>
+                    Share on Twitter
+                  </a>
+                </div>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
